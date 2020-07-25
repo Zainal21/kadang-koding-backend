@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'PagesController@index');
+
+Route::group(['prefix' => 'site' ,'namespace' => 'Backend'], function(){
+    Route::get('/login', 'AuthController@login');
+    Route::get('/admin', 'DashboardController@index');
 });
