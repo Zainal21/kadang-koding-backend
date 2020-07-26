@@ -21,7 +21,10 @@
         <link href="{{asset('Backend/assets/plugins/uniform/css/default.css')}}" rel="stylesheet"/>
         <link href="{{asset('Backend/assets/plugins/switchery/switchery.min.css')}}" rel="stylesheet"/>
       
-        <!-- Theme Styles -->
+        {{-- toastr --}}
+        <link href="{{asset('Backend/assets/plugins/toastr/toastr.min.css')}}" rel="stylesheet">
+       
+        <!-- css -->
         <link href="{{asset('Backend/assets/css/space.min.css')}}" rel="stylesheet">
         <link href="{{asset('Backend/assets/css/custom.css')}}" rel="stylesheet">
 
@@ -37,5 +40,10 @@
         <script src="{{asset('Backend/assets/plugins/uniform/js/jquery.uniform.standalone.js')}}"></script>
         <script src="{{asset('Backend/assets/plugins/switchery/switchery.min.js')}}"></script>
         <script src="{{asset('Backend/assets/js/space.min.js')}}"></script>
+         <script src="{{asset('Backend/assets/plugins/toastr/toastr.min.js')}}"></script>
+        <script src="{{asset('Backend/assets/js/pages/ui-notifications.js')}}"></script>
+        <script src="{{asset('Backend/assets/js/sweetalert2.all.min.js')}}"></script>
+        <script src="{{asset('Backend/assets/js/login.js')}}"></script>
+
     </body>
 </html>

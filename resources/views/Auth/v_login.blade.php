@@ -7,16 +7,17 @@
           <div class="row">
               <div class="col-sm-6 col-md-3 login-box">
                   <h4 class="login-title">Admin Panel</h4>
-                  <form action="" method="POST">
+                  <form action="/site/procees_login" method="POST">
+                    @csrf
                       <div class="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1">
+                          <label for="exampleInputEmail1">Username</label>
+                          <input type="text" class="form-control" id="exampleInputEmail1" name="name">
                       </div>
                       <div class="form-group">
                           <label for="exampleInputPassword1">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
+                          <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                       </div>
-                      <button type="submit" class="btn btn-primary">Login</button>
+                      <button type="submit" id="btn-login" class="btn btn-primary">Login</button>
                   </form>
               </div>
           </div>

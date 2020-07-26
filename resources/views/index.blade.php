@@ -1,59 +1,7 @@
+@include('Schema.site_header')
 
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Kadang Koding Indonesia</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="{{asset('Frontend/assets/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-  <link href="{{asset('Frontend/assets/vendor/icofont/icofont.min.css')}}" rel="stylesheet">
-  <link href="{{asset('Frontend/assets/vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
-  <link href="{{asset('Frontend/assets/vendor/owl.carousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
-  <link href="{{asset('Frontend/assets/vendor/venobox/venobox.css')}}" rel="stylesheet">
-  <link href="{{asset('Frontend/assets/vendor/aos/aos.css')}}" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="{{asset('Frontend/assets/css/style.css')}}" rel="stylesheet">
-
-</head>
-
-<body>
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container d-flex align-items-center">
-
-      <div class="logo mr-auto">
-        <!-- <h1 class="text-light"><a href="#"><span>.</span></a></h1> -->
-        <img src="{{asset('Frontend/assets/img/logo_002.png')}}" alt="" srcset="">
-      </div>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#">Home</a></li>
-           <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-
-    </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
+  {{-- <!-- ======= Hero Section ======= --> --}}
   <section id="hero">
 
     <div class="container">
@@ -406,57 +354,6 @@
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+  
 
-    <div class="footer-top">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="row  justify-content-center">
-          <div class="col-lg-12">
-            <h3>CV. Kadang Koding Indonesia</h3>
-            </div>
-        </div>
-
-       
-
-        <div class="social-links">
-          <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
-    <div class="container footer-bottom clearfix">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Kadang Koding Indonesia</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-       
-        2020 Design by <a href="#">Muhamad Zainal Arifin</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
-  <!-- Vendor JS Files -->
-  <script src="{{asset('Frontend/assets/vendor/jquery/jquery.min.js')}}"></script>
-  <script src="{{asset('Frontend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-  <script src="{{asset('Frontend/assets/vendor/jquery.easing/jquery.easing.min.js')}}"></script>
-  <script src="{{asset('Frontend/assets/vendor/php-email-form/validate.js')}}"></script>
-  <script src="{{asset('Frontend/assets/vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
-  <script src="{{asset('Frontend/assets/vendor/owl.carousel/owl.carousel.min.js')}}"></script>
-  <script src="{{asset('Frontend/assets/vendor/venobox/venobox.min.js')}}"></script>
-  <script src="{{asset('Frontend/assets/vendor/aos/aos.js')}}"></script>
-
-  <!-- Template Main JS File -->
-  <script src="{{asset('Frontend/assets/js/main.js')}}"></script>
-
-</body>
-
-</html>
+    @include('Schema.site_footer')

@@ -10,4 +10,8 @@ class PagesController extends Controller
     {
         return view('index');
     }
+    public function show()
+    {
+        return view('blog-details');
+    }
 }
