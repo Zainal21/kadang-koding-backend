@@ -7,7 +7,7 @@
 
         <div class="row  justify-content-center">
           <div class="col-lg-12">
-            <h3>CV. Kadang Koding Indonesia</h3>
+            <h3>CV. {{$setting->Nama_perusahaan}}</h3>
             </div>
         </div>
 
@@ -25,7 +25,7 @@
     </div>
 <div class="container footer-bottom clearfix">
   <div class="copyright">
-    &copy; Copyright <strong><span>Kadang Koding Indonesia</span></strong>. All Rights Reserved
+  &copy; Copyright <strong><span>{{$setting->Nama_perusahaan}}</span></strong>. All Rights Reserved
   </div>
   <div class="credits">
    

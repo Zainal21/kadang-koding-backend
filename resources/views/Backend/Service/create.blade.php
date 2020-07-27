@@ -9,7 +9,7 @@
               <div class="breadcrumbs-area clearfix">
                   <h4 class="page-title pull-left">Dashboard</h4>
                   <ul class="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="{{url('/site/admin')}}">Home</a></li>
                       <li><span>Service List</span></li>
                   </ul>
               </div>

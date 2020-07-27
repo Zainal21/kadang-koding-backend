@@ -9,7 +9,7 @@
               <div class="breadcrumbs-area clearfix">
                   <h4 class="page-title pull-left">Dashboard</h4>
                   <ul class="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="{{url('/site/admin')}}">Home</a></li>
                       <li><span>Portfolio List</span></li>
                   </ul>
               </div>
@@ -43,8 +43,9 @@
                           <div class="form-group">
                               <label for="example-url-input" class="col-form-label">kategori</label>
                               <select name="kategori" class="form-control" id="">
-                                <option value="Aktif">Aktif</option>
-                                <option value="Nonaktif">Nonaktif</option>
+                                <option value="filter-app">Compay Profile</option>
+                                <option value="filter-card">E-Commerce</option>
+                                <option value="filter-web">Mobile App</option>
                               </select>
                           </div>
                           <button type="submit" class="btn btn-primary">Simpan</button>

@@ -25,8 +25,8 @@
         <link href="{{asset('Backend/assets/plugins/toastr/toastr.min.css')}}" rel="stylesheet">
        
         <!-- css -->
-        <link href="{{asset('Backend/assets/css/space.min.css')}}" rel="stylesheet">
-        <link href="{{asset('Backend/assets/css/custom.css')}}" rel="stylesheet">
+        {{-- <link href="{{asset('Backend/assets/css/space.min.css')}}" rel="stylesheet">
+        <link href="{{asset('Backend/assets/css/custom.css')}}" rel="stylesheet"> --}}
 
     </head>
     <body>

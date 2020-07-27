@@ -9,7 +9,7 @@
               <div class="breadcrumbs-area clearfix">
                   <h4 class="page-title pull-left">Dashboard</h4>
                   <ul class="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="{{url('/site/admin')}}">Home</a></li>
                       <li><span>Setting</span></li>
                   </ul>
               </div>
@@ -76,8 +76,8 @@
                       <div class="form-group">
                         <label for="">Cover Sebelumnya</label>
                          <img 
-                         src="@if ($stg->Hero_Cover)
-                        {{ \Storage::url($stg->Hero_Cover) }}  
+                         src="@if ($stg->Hero_cover)
+                        {{ \Storage::url($stg->Hero_cover) }}  
                              @else
                         {{asset('admin/assets/images/blog/post-thumb1.jpg')}}
                          @endif"
@@ -86,11 +86,11 @@
                       </div>
                      <div class="form-group">
                          <label for="example-search-input" class="col-form-label">Logo</label>
-                         <input class="form-control" type="file" name="logo">
+                         <input class="form-control" type="file" name="logo" required`>
                      </div>
                      <div class="form-group">
                          <label for="inputPassword" class="">Cover atau Hero Image</label>
-                         <input type="file" class="form-control" name="Hero_Cover">
+                         <input type="file" class="form-control" name="Hero_Cover" required>
                      </div>
                      <button type="submit" class="btn btn-success">Simpan</button>
                  </div>

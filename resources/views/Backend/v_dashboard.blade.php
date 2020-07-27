@@ -27,12 +27,11 @@
                               <div class="s-report-inner pr--20 pt--30 mb-3">
                                   <div class="icon"><i class="fa fa-btc"></i></div>
                                   <div class="s-report-title d-flex justify-content-between">
-                                      <h4 class="header-title mb-0">Bitcoin</h4>
-                                      <p>24 H</p>
+                                      <h4 class="header-title mb-0">Blog</h4>
+                                      <p>Jumlah</p>
                                   </div>
                                   <div class="d-flex justify-content-between pb-2">
-                                      <h2>$ 4567809,987</h2>
-                                      <span>- 45.87</span>
+                                      <h2>{{$blog}}</h2>
                                   </div>
                               </div>
                               <canvas id="coin_sales1" height="100"></canvas>
@@ -43,12 +42,12 @@
                               <div class="s-report-inner pr--20 pt--30 mb-3">
                                   <div class="icon"><i class="fa fa-btc"></i></div>
                                   <div class="s-report-title d-flex justify-content-between">
-                                      <h4 class="header-title mb-0">Bitcoin Dash</h4>
-                                      <p>24 H</p>
+                                      <h4 class="header-title mb-0">Menu</h4>
+                                       <p>Jumlah</p>
                                   </div>
                                   <div class="d-flex justify-content-between pb-2">
-                                      <h2>$ 4567809,987</h2>
-                                      <span>- 45.87</span>
+                                  <h2>{{$menu}}</h2>
+                                    
                                   </div>
                               </div>
                               <canvas id="coin_sales2" height="100"></canvas>
@@ -59,12 +58,12 @@
                               <div class="s-report-inner pr--20 pt--30 mb-3">
                                   <div class="icon"><i class="fa fa-eur"></i></div>
                                   <div class="s-report-title d-flex justify-content-between">
-                                      <h4 class="header-title mb-0">Euthorium</h4>
-                                      <p>24 H</p>
+                                      <h4 class="header-title mb-0">Porfolio</h4>
+                                       <p>Jumlah</p>
                                   </div>
                                   <div class="d-flex justify-content-between pb-2">
-                                      <h2>$ 4567809,987</h2>
-                                      <span>- 45.87</span>
+                                  <h2>{{$portfolio}}</h2>
+                                    
                                   </div>
                               </div>
                               <canvas id="coin_sales3" height="100"></canvas>
@@ -80,10 +79,7 @@
                           <div class="card-body">
                               <div class="d-flex justify-content-between align-items-center">
                                   <h4 class="header-title mb-0">Overview</h4>
-                                  <select class="custome-select border-0 pr-3">
-                                      <option selected>Last 24 Hours</option>
-                                      <option value="0">01 July 2018</option>
-                                  </select>
+                                 
                               </div>
                               <div id="verview-shart"></div>
                           </div>

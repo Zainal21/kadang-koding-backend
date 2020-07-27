@@ -9,7 +9,7 @@
               <div class="breadcrumbs-area clearfix">
                   <h4 class="page-title pull-left">Dashboard</h4>
                   <ul class="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="{{url('/site/admin')}}">Home</a></li>
                       <li><span>Service List</span></li>
                   </ul>
               </div>
@@ -28,9 +28,9 @@
                       <div class="card-body">
                           <h4 class="header-title">Edit Service List</h4>
                           <p class="text-muted font-14 mb-4">Here are examples of.</p>
-                         <form action="{{url('/site/admin/service/update/'.$data->id)}}" method="post">
+                         <form action="{{url('/site/admin/service/update/'.$data->id)}}" method="post" enctype="multipart/form-data">
                             @csrf
-                            @method('put')
+                            @method('put')  
                           <div class="form-group">
                               <label for="example-text-input" class="col-form-label">Nama Service</label>
                           <input class="form-control"  name="nama_service" type="text" value="{{$data->nama_service}}">
@@ -39,8 +39,7 @@
                          <div class="form-group">
                            <label for="">Icon Sebelumnya</label>
                          <img src="{{\Storage::url($data->icon)}}" width="400px" class="img-fluid d-block" height="200px" alt="">
-                         </div>
-                          
+                         </div>   
                   </div>
               </div>
             </div>
@@ -49,7 +48,7 @@
                    <div class="card-body">
                         <div class="form-group">
                             <label for="example-email-input" class="col-form-label">icon</label>
-                            <input class="form-control"  name="icon" type="file">
+                            <input class="form-control"  name="icon" type="file" required>
                         </div>
                         <div class="form-group">
                             <label for="example-url-input" class="col-form-label">deskripsi</label>
@@ -58,9 +57,9 @@
                         <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                    </div>
+                </form>
                </div>
             </div>
-        </form>
       </div>
      
 @endsection

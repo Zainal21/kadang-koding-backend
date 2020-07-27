@@ -9,7 +9,7 @@
               <div class="breadcrumbs-area clearfix">
                   <h4 class="page-title pull-left">Dashboard</h4>
                   <ul class="breadcrumbs pull-left">
-                      <li><a href="index.html">Home</a></li>
+                      <li><a href="{{url('/site/admin')}}">Home</a></li>
                       <li><span>Menu</span></li>
                   </ul>
               </div>
@@ -25,7 +25,7 @@
               <div class="card">
                 <div class="card-body">
                     <h4 class="header-title">Menu list</h4>
-                    <a href="" class="btn btn-primary btn-sm mb-2 float-right"><i class="fas fa-tambah "></i>Tambah</a>
+                <a href="{{url('/site/admin/menu/create')}}" class="btn btn-primary btn-sm mb-2 float-right"><i class="fas fa-tambah "></i>Tambah</a>
                     <div class="single-table">
                         <div class="table-responsive">
                             <table class="table text-center">
@@ -49,9 +49,9 @@
                                             <form action="{{url('/site/admin/menu/delete/'. $item->id)}}" method="post" class="d-inline">
                                                     @csrf
                                                     @method('delete')
-                                                    <button type="submit" class="btn btn-danger"><i class="ti-trash"></i></button>
+                                                    <button type="submit" class="btn btn-danger">Hapus</button>
                                                 </form>    
-                                            </i></a><a href="" class="btn btn-info btn-sm"><i class="ti-trash"></i></a></td>
+                                            </i></a><a href="{{url('/site/admin/menu/edit/'. $item->id)}}" class="btn btn-info btn-sm">Ubah</i></a></td>
                                         </tr>
                                     @endforeach
                                 </tbody>

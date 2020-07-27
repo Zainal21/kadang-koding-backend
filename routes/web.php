@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@index');
 Route::get('/blog-details', 'PagesController@show');
 
-Route::group(['prefix' => 'site' ,'namespace' => 'Backend'], function(){
-    Route::get('/login', 'AuthController@login');
-    Route::post('/procees_login', 'AuthController@proccess_login');
+Route::get('/login', 'Backend\AuthController@login')->name('login');
+Route::post('/procees_login', 'Backend\AuthController@proccess_login');
+Route::group(['prefix' => 'site', 'middleware' => 'auth' ,'namespace' => 'Backend'], function(){
     Route::get('/admin', 'DashboardController@index');
 
     // menu
@@ -62,4 +62,6 @@ Route::group(['prefix' => 'site' ,'namespace' => 'Backend'], function(){
     Route::get('admin/blog/edit/{id}', 'BlogController@edit');
     Route::put('admin/blog/update/{id}', 'BlogController@update');
     Route::delete('admin/blog/delete/{id}', 'BlogController@destroy');
+
+    Route::get('/logout', 'AuthController@logout');
 });

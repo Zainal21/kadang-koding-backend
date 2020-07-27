@@ -9,7 +9,7 @@
               <div class="breadcrumbs-area clearfix">
                   <h4 class="page-title pull-left">Dashboard</h4>
                   <ul class="breadcrumbs pull-left">
-                      <li><a href="#">Home</a></li>
+                      <li><a href="{{url('/site/admin')}}">Home</a></li>
                       <li><span>Client</span></li>
                   </ul>
               </div>
@@ -25,7 +25,7 @@
               <div class="card">
                   <div class="card-body">
                       <h4 class="header-title">Client</h4>
-                      <a href="" class="btn btn-primary btn-sm mb-2 float-right"><i class="fas fa-tambah "></i>Tambah</a>
+                  <a href="{{url('/site/admin/client/create')}}" class="btn btn-primary btn-sm mb-2 float-right"><i class="fas fa-tambah "></i>Tambah</a>
                       <div class="single-table">
                           <div class="table-responsive">
                               <table class="table text-center">

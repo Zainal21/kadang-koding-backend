@@ -27,5 +27,12 @@ class AuthController extends Controller
       }else{
          return response()->json(['error' => 'Username atau Password anda Salah']);
       }
-   }  
+   } 
+   public function logout()
+   {
+      if(Auth::user()){
+         Auth::logout();
+         return redirect('/site/login');
+      }
+   } 
 }

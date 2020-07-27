@@ -5,7 +5,7 @@ $(document).ready(function(){
       var _password = $("input[name=password]").val();
       var token = $("input[name=_token]").val();
       $.ajax({
-        url : '/site/procees_login',
+        url : '/procees_login',
         method: 'POST',
         dataType:'JSON',
         data:{
