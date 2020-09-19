@@ -19,15 +19,12 @@
   </div>
   <!-- page title area end -->
   <div class="main-content-inner">
-      
-   
           <div class="row">
               <!-- Textual inputs start -->
               <div class="col-lg mt-5">
                   <div class="card">
                       <div class="card-body">
                           <h4 class="header-title">Portfolio List</h4>
-                          <p class="text-muted font-14 mb-4">Here are examples of.</p>
                          <form action="{{url('/site/admin/portfolio')}}" method="post" enctype="multipart/form-data">
                             @csrf
                           <div class="form-group">
@@ -54,8 +51,7 @@
               </div>
             </form>
         </div>
-      </div>
-     
+      </div>  
 @endsection
 
 

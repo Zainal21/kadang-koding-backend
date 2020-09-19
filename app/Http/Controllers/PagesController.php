@@ -16,8 +16,4 @@ class PagesController extends Controller
             'menu' => \App\menu::all()  
         ]);
     }
-    public function show()
-    {
-        return view('blog-details');
-    }
 }

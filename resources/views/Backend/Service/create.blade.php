@@ -19,15 +19,12 @@
   </div>
   <!-- page title area end -->
   <div class="main-content-inner">
-      
-   
           <div class="row">
               <!-- Textual inputs start -->
               <div class="col-lg mt-5">
                   <div class="card">
                       <div class="card-body">
                           <h4 class="header-title">Tambah List Service</h4>
-                          <p class="text-muted font-14 mb-4">Here are examples of.</p>
                          <form action="{{url('/site/admin/service')}}" method="post" enctype="multipart/form-data">
                             @csrf
                           <div class="form-group">
@@ -35,11 +32,11 @@
                           <input class="form-control"  name="nama_service" type="text" value="">
                           </div>
                           <div class="form-group">
-                              <label for="example-email-input" class="col-form-label">icon</label>
+                              <label for="example-email-input" class="col-form-label">Ikon</label>
                               <input class="form-control"  name="icon" type="file">
                           </div>
                           <div class="form-group">
-                              <label for="example-url-input" class="col-form-label">deskripsi</label>
+                              <label for="example-url-input" class="col-form-label">Deskripsi</label>
                               <textarea name="deskripsi" class="form-control" id="" cols="30" rows="10"></textarea>
                           </div>
                           <button type="submit" class="btn btn-primary">Simpan</button>
@@ -49,7 +46,6 @@
             </form>
         </div>
       </div>
-     
 @endsection
 
 

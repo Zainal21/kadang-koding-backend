@@ -19,8 +19,6 @@
   </div>
   <!-- page title area end -->
   <div class="main-content-inner">
-      
-   
           <div class="row">
               <!-- Textual inputs start -->
               <div class="col-lg mt-5">
@@ -38,7 +36,7 @@
                          
                          
                           <div class="form-group">
-                              <label for="example-email-input" class="col-form-label">url</label>
+                              <label for="example-email-input" class="col-form-label">Url</label>
                               <input class="form-control"  name="url" type="text" value="{{$menu->url}}">
                           </div>
                           <div class="form-group">
@@ -55,7 +53,6 @@
             </form>
         </div>
       </div>
-     
 @endsection
 
 

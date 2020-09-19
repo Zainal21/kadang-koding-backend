@@ -1,7 +1,4 @@
-@extends('Schema.layout')
-@section('content')
-@include('Schema.header_area')
-  <!-- header area end -->
+ <!-- header area end -->
   <!-- page title area start -->
   <div class="page-title-area">
       <div class="row align-items-center">
@@ -27,7 +24,7 @@
                       <h4 class="header-title">Client</h4>
                   <a href="{{url('/site/admin/client/create')}}" class="btn btn-primary btn-sm mb-2 float-right"><i class="fas fa-tambah "></i>Tambah</a>
                       <div class="single-table">
-                          <div class="table-responsive">
+                          <div class="table-responsive table-bordered">
                               <table class="table text-center">
                                   <thead class="text-uppercase bg-dark">
                                       <tr class="text-white">
@@ -55,7 +52,6 @@
                                             </td>
                                         </tr>
                                         @endforeach
-                                      
                                   </tbody>
                               </table>
                           </div>

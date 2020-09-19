@@ -28,7 +28,7 @@
                       <h4 class="header-title">Portfolio list</h4>
                   <a href="{{url('/site/admin/portfolio/create')}}" class="btn btn-primary btn-sm mb-2 float-right"><i class="fas fa-tambah "></i>Tambah</a>
                       <div class="single-table">
-                          <div class="table-responsive">
+                          <div class="table-responsive table-bordered">
                               <table class="table text-center">
                                   <thead class="text-uppercase bg-dark">
                                       <tr class="text-white">
@@ -67,6 +67,5 @@
               </div>
           </div>
       </div>
-  </div>
-     
+  </div>   
 @endsection

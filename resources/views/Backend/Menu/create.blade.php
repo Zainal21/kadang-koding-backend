@@ -19,25 +19,20 @@
   </div>
   <!-- page title area end -->
   <div class="main-content-inner">
-      
-   
-          <div class="row">
+       <div class="row">
               <!-- Textual inputs start -->
               <div class="col-lg mt-5">
                   <div class="card">
                       <div class="card-body">
                           <h4 class="header-title">Tambah Menu</h4>
-                          <p class="text-muted font-14 mb-4">Here are examples of.</p>
                          <form action="{{url('/site/admin/menu')}}" method="post">
                             @csrf
                           <div class="form-group">
                               <label for="example-text-input" class="col-form-label">Nama</label>
                               <input class="form-control"  name="name" type="text">
                           </div>
-                         
-                         
                           <div class="form-group">
-                              <label for="example-email-input" class="col-form-label">url</label>
+                              <label for="example-email-input" class="col-form-label">Url</label>
                               <input class="form-control"  name="url" type="text">
                           </div>
                           <div class="form-group">

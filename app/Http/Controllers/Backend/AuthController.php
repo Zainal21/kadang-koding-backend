@@ -32,7 +32,7 @@ class AuthController extends Controller
    {
       if(Auth::user()){
          Auth::logout();
-         return redirect('/site/login');
+         return redirect('/login');
       }
    } 
 }
