@@ -25,7 +25,7 @@ class PortfolioController extends Controller
             'nama_project' => 'required',
             'gambar' => 'required'
         ]);
-        $file = $request->file('portfolio');
+        $file = $req->file('gambar');
         $image = $file->move('images/portfolio/', time(). '-'. Str::limit(Str::slug($req->title), 50, ''). '-' . strtotime('now'). '.'. $file->getClientOriginalExtension()); 
         portfolio::create([
             'nama_project' => $req->nama_project,

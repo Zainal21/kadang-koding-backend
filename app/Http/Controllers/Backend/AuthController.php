@@ -23,7 +23,7 @@ class AuthController extends Controller
          return response()->json(['error' => $error->errors()->all()]);
       }else if( Auth::attempt(['name' => $req->name, 'password' => $req->password])){
         
-        return redirect()->route('admin')
+        return redirect()->route('admin');
       }else{
          return response()->json(['error' => 'Username atau Password anda Salah']);
       }
