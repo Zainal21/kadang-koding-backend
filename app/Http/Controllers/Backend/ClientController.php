@@ -22,11 +22,14 @@ class ClientController extends Controller
             'nama_partner'=> 'required',
            
         ]);
+        $file = $request->file('logo');
+        $image = $file->move('images/logo_client/', time(). '-'. Str::limit(Str::slug($req->title), 50, ''). '-' . strtotime('now'). '.'. $file->getClientOriginalExtension()); 
+
         client::create([
-            'nama_partner'=> $req->nama_partner,
-            'slug'=>  Str::slug($req->nama_partner),
-            'logo'=> $req->file('logo')->store('uploads/client', 'public')
-            ]);
+                'nama_partner'=> $req->nama_partner,
+                'slug'=>  Str::slug($req->nama_partner),
+                'logo'=> $image
+        ]);
           
         return redirect('/site/admin/client');
     }

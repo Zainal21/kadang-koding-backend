@@ -25,9 +25,11 @@ class PortfolioController extends Controller
             'nama_project' => 'required',
             'gambar' => 'required'
         ]);
+        $file = $request->file('portfolio');
+        $image = $file->move('images/portfolio/', time(). '-'. Str::limit(Str::slug($req->title), 50, ''). '-' . strtotime('now'). '.'. $file->getClientOriginalExtension()); 
         portfolio::create([
             'nama_project' => $req->nama_project,
-            'gambar' => $req->file('gambar')->store('uploads/portfolio', 'public'),
+            'gambar' => $image,
             'kategori' => $req->kategori,
             'slug' => Str::slug( $req->nama_project)
         ]);
@@ -37,7 +39,9 @@ class PortfolioController extends Controller
     {
         $data = portfolio::findOrfail($id);
         if($data->gambar){
-            Storage::delete('public'.$data->gambar);
+           if( file_exists($data->gambar)){
+               unlink($data->gambar);
+           }
         }
         portfolio::destroy($id);
         return redirect('/site/admin/portfolio');

@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@index');;
 Route::get('/login', 'Backend\AuthController@login')->name('login');
 Route::post('/procees_login', 'Backend\AuthController@proccess_login');
+
 Route::group(['prefix' => 'site', 'middleware' => 'auth' ,'namespace' => 'Backend'], function(){
-    Route::get('/admin', 'DashboardController@index');
+    Route::get('/admin', 'DashboardController@index')->name('admin');
     // menu
     Route::get('/admin/menu', 'MenuController@index');
     Route::get('/admin/menu/create', 'MenuController@create');

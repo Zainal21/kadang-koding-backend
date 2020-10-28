@@ -10,7 +10,7 @@ class DashboardController extends Controller
     public function index()
     {
       return view('Backend.v_dashboard',[
-        'blog' => \App\blog::count(),
+        // 'blog' => \App\blog::count(),
         'portfolio' => \App\portfolio::count(),
         'menu' => \App\menu::count()
       ]);

@@ -22,9 +22,12 @@ class ServiceController extends Controller
             'nama_service'=> 'required',
             'deskripsi'=> 'required'
         ]);
+        $file = $request->file('thumbnail');
+        $image = $file->move('images/portfolio/', time(). '-'. Str::limit(Str::slug($req->title), 50, ''). '-' . strtotime('now'). '.'. $file->getClientOriginalExtension()); 
+
         service::create([
             'nama_service' => $req->nama_service,
-            'icon' => $req->file('icon')->store('uploads/service', 'public'),
+            'icon' => $image,
             'deskripsi' => $req->deskripsi
         ]);
         return redirect('/site/admin/service');
@@ -35,24 +38,38 @@ class ServiceController extends Controller
     }
     public function update(Request $req, $id)
     {
-     if($req->file('icon') == ""){
-            service::where(['id' => $id])->update([
-            'nama_service' => $req->nama_service,
-            'deskripsi' => $req->deskripsi
-            ]);
-        }else{
-            $data = service::findOrfail($id);
-            if($data->icon){
-                Storage::delete( 'public/'. $data->icon);
+        if($request->hasFile('icon')){
+            if(file_exists($cause->thumbnail)){
+                unlink($cause->thumbnail);
             }
+            $service = service::findOrfail($id);
+            $file = $request->file('icon');
+            $image = $file->move('images/icon/', time(). '-'. Str::limit(Str::slug($req->title), 50, ''). '-' . strtotime('now'). '.'. $file->getClientOriginalExtension()); 
             service::where(['id' => $id])->update([
-            'icon' => $req->file('icon')->store('uploads/service', 'public'),
-            'nama_service' => $req->nama_service,
-            'deskripsi' => $req->deskripsi
-        ]);
-        return redirect('/site/admin/service');
-     }
+                        'icon' => !empty($image) ? $image : $service->icon,
+                        'nama_service' => $req->nama_service,
+                        'deskripsi' => $req->deskripsi
+            ]);
+        }
     }
+    //  if($req->file('icon') == ""){
+    //         service::where(['id' => $id])->update([
+    //         'nama_service' => $req->nama_service,
+    //         'deskripsi' => $req->deskripsi
+    //         ]);
+    //     }else{
+    //         $data = service::findOrfail($id);
+    //         if($data->icon){
+    //             Storage::delete( 'public/'. $data->icon);
+    //         }
+    //         service::where(['id' => $id])->update([
+    //         'icon' => $req->file('icon')->store('uploads/service', 'public'),
+    //         'nama_service' => $req->nama_service,
+    //         'deskripsi' => $req->deskripsi
+    //     ]);
+    //     return redirect('/site/admin/service');
+    //  }
+    // }
     public function destroy($id)
     {
         $data = service::findOrfail($id);
