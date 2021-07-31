@@ -2,7 +2,7 @@
 
 ### Introduce
 
-**Kadang Koding Indonesia** is a company with a focus on the digital industry, especially in the field of services and software trading. CV. Sometimes Koding Indonesia was founded in 2018. Located in Surakata
+**Kadang Koding Indonesia** is a company with a focus on the digital industry, especially in the field of services and software trading. CV. Kadang Koding Indonesia was founded in 2018. Located in Surakata
 
 ![Home](public/demo/image9.png)
 
